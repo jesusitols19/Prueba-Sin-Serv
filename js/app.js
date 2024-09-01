@@ -1,26 +1,24 @@
 
 var url = window.location.href;
-var swLocation = '/Prueba-Sin-Serv/sw.js';
+var swLocation = "/Prueba-Sin-Serv/sw.js";
 
 var swReg;
 
 if ( navigator.serviceWorker ) {
 
 
-    if ( url.includes('localhost') ) {
-        swLocation = '/sw.js';
-    }
+    
 
 
     //window.addEventListener('load', function() {
 
-        navigator.serviceWorker.register( swLocation , { scope: '/' }).then( function(reg){
+        navigator.serviceWorker.register( swLocation);/*.then( function(reg){
 
             swReg = reg;
             console.log("Se registro correctamente");
             swReg.pushManager.getSubscription().then( verificaSuscripcion );
 
-        });
+        });*/
     //});
 
 }
@@ -181,7 +179,7 @@ postBtn.on('click', function() {
 
 
 // Obtener mensajes del servidor
-function getMensajes() {
+/*function getMensajes() {
 
     fetch('api')
         .then( res => res.json() )
@@ -197,7 +195,7 @@ function getMensajes() {
 
 }
 
-getMensajes();
+getMensajes();*/
 
 
 
