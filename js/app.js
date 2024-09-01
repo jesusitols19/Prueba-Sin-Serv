@@ -1,6 +1,6 @@
 
 var url = window.location.href;
-var swLocation = 'Prueba-Sin-Serv/sw.js';
+var swLocation = '/sw.js';
 
 var swReg;
 
