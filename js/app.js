@@ -14,7 +14,7 @@ if ( navigator.serviceWorker ) {
 
     //window.addEventListener('load', function() {
 
-        navigator.serviceWorker.register( swLocation ).then( function(reg){
+        navigator.serviceWorker.register( swLocation , { scope: '/' }).then( function(reg){
 
             swReg = reg;
             console.log("Se registro correctamente");
